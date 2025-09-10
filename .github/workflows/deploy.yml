@@ -1,0 +1,14 @@
+name: Build and deploy
+
+on:
+    push:
+        branches:
+            - main
+            - test-docker
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ls
