@@ -3,3 +3,4 @@ uvicorn
 opentelemetry-distro
 opentelemetry-instrumentation-fastapi
 opentelemetry-instrumentation-requests
+opentelemetry-exporter-otlp-proto-http
