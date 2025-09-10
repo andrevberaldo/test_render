@@ -7,5 +7,5 @@ api = FastAPI(
 @api.get("/hello")
 def say_hello():
     return {
-        "msg": "render!"
+        "msg": "render version 2!"
     }
