@@ -7,8 +7,17 @@ on:
             - test-docker
 
 jobs:
-    build:
+    build-docker-image:
         runs-on: ubuntu-latest
+        
         steps:
-            - uses: actions/checkout@v4
-            - run: ls
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Login Docker Hub
+              uses: docker/login-action@v3
+              with:
+                username: ${{ secrets.DOCKERHUB_USERNAME }}
+                password: ${{ secrets.DOCKERHUB_TOKEN }}
+            
+            
