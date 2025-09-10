@@ -10,7 +10,7 @@ api = FastAPI(
 )
 
 FastAPIInstrumentor.instrument_app(api)
-exporter = OTLPMetricExporter(endpoint="https://otlb-gateway.grafana.net/otlp", headers={"Authorization": f"Bearer {os.getenv("GRAFANA_TOKEN")}"})
+exporter = OTLPMetricExporter(endpoint="otlp-gateway-prod-us-east-2.grafana.net/otlp", headers={"Authorization": f"Bearer {os.getenv("GRAFANA_TOKEN")}"})
 reader = PeriodicExportingMetricReader(exporter=exporter, export_interval_millis=5000)
 provider = MeterProvider(metric_readers=[reader])
 
