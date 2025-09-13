@@ -31,6 +31,7 @@ jobs:
                 title: Promote Staging to Production
                 draft: false
                 update-branch: true
+                branch-suffix: auto-pr
                 committer: "github actions <actions@gihub.com>"
 
             
