@@ -24,7 +24,7 @@ jobs:
             - name: Open Main PR
               uses: peter-evans/create-pull-request@v7
               with:
-                token: ${{ secrets.GITHUB_TOKEN }}
+                token: ${{ secrets.AUTO_PR_TOKEN }}
                 branch: staging
                 base: main
                 commit-message: "Auto PR"
