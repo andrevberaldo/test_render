@@ -24,7 +24,7 @@ jobs:
                 git config user.email "actions@github.com"
 
             - name: Open Main PR
-              uses: peter-evans/create-pull-request@v7
+              uses: peter-evans/create-pull-request@v6
               with:
                 token: ${{ secrets.AUTO_PR_TOKEN }}
                 branch: auto-pr
