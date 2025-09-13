@@ -12,18 +12,26 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+              with:
+                ref: staging
 
             - name: Deploy
               run: echo Deploying to staging env
 
+            - name: git connfig
+              run: |
+                git config user.name "github-actions"
+                git config user.email "actions@github.com"
+
             - name: Open Main PR
               uses: peter-evans/create-pull-request@v7
               with:
-                token: ${{ secrets.GITHUB_TOKEN }}
-                branch: staging
+                token: ${{ secrets.AUTO_PR_TOKEN }}
+                branch: auto-pr
                 base: main
+                commit-message: "Auto PR"
                 title: Promote Staging to Production
                 draft: false
-
+                delete-branch: true
             
             
