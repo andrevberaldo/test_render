@@ -1,0 +1,29 @@
+name: Deploy Staging
+
+on:
+    push:
+        branches:
+            - staging
+
+jobs:
+    build-docker-image:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Deploy
+              run: echo Deploying to staging env
+
+            - name: Open Main PR
+              uses: peter-evans/create-pull-request@v7
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                branch: staging
+                base: main
+                title: Promote Staging to Production
+                draft: false
+
+            
+            
