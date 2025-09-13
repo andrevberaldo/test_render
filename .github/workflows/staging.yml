@@ -25,7 +25,7 @@ jobs:
               uses: peter-evans/create-pull-request@v7
               with:
                 token: ${{ secrets.AUTO_PR_TOKEN }}
-                branch: staging
+                branch: auto-pr
                 base: main
                 commit-message: "Auto PR"
                 title: Promote Staging to Production
