@@ -25,8 +25,8 @@ jobs:
               uses: peter-evans/create-pull-request@v7
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                branch: main
-                base: staging
+                branch: staging
+                base: main
                 commit-message: "Auto PR"
                 title: Promote Staging to Production
                 draft: false
