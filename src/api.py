@@ -4,6 +4,8 @@ api = FastAPI(
     title="api to test the render platform"
 )
 
+# some tests
+
 @api.get("/hello")
 def say_hello():
     return {
