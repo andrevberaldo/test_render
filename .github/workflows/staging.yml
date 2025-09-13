@@ -25,7 +25,5 @@ jobs:
                 commit-message: "Auto PR"
                 title: Promote Staging to Production
                 delete-branch: true
-                allow-empty-commit: true
-
-            
+                allow-empty-commit: true            
             
