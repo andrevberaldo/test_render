@@ -33,5 +33,6 @@ jobs:
                 title: Promote Staging to Production
                 draft: false
                 delete-branch: true
+                allow-empty-commit: true
             
             
