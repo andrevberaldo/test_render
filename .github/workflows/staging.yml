@@ -33,7 +33,5 @@ jobs:
                 title: Promote Staging to Production
                 draft: false
                 delete-branch: true
-                committer: "github actions <actions@gihub.com>"
-
             
             
